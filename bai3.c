@@ -36,7 +36,7 @@ int main(){
     {
         for (int j = i+1; j < n; j++)
         {
-            if (phanTu[i]>phanTu[j])
+            if (phanTu[i]<phanTu[j])
             {
                 temp=phanTu[i];
                 phanTu[i]=phanTu[j];

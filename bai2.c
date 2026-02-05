@@ -25,7 +25,7 @@ int main()
         scanf("%d",&phanTu[i]);
     }
     //tìm max
-    int max=0;
+    int max=phanTu[0];
     for (int i = 0; i < n; i++)
     {
         if (phanTu[i]>max)
@@ -34,7 +34,18 @@ int main()
         }
         
     }
+    //tim min
+    int min =phanTu[0];
+    for (int i = 0; i < n; i++)
+    {
+        if (phanTu[i]<min)
+        {
+            min=phanTu[i];
+        }
+        
+    }
     printf("vậy phần tử lớn nhất là : %d",max);
+    printf("vậy phần tử nhỏ nhất là : %d",min);
     system("pause");
     return 0;
 }
