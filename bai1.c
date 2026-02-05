@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [ nguyễn Ngọc Quang]
+ * MSSV:      [PS47259]
+ * Lớp:       [Com108 CS21201]
  *****************************************************************************/
 
 //  BÀI 1: TÍNH TRUNG BÌNH TỔNG CÁC SỐ CHIA HẾT CHO 3 TRONG MẢNG 
@@ -10,4 +10,33 @@
 
 
 // VIẾT CODE Ở ĐÂY
-
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    //số lượng phần tử cần tính
+    int n=0;
+    printf("nhập số lượng phần tử cần tính :");
+    scanf("%d",&n);
+    //nhập mảng
+    int mang[n];
+    for (int i = 0; i < n; i++)
+    {
+        printf("nhập thành phần cần tính thứ %d :",i+1);
+        scanf("%d",&mang[i]);
+    }
+    //tính trung bình cộng
+    int tong=0;
+    int count=0;
+    for (int i = 0; i <n; i++)
+    {
+        if (mang[i]%3==0)
+        {
+           tong+=mang[i];
+           count++;
+        }
+    }
+    float h=(float)tong/count;
+    printf("trung bình cộng bằng :%.2f",h);
+    system("pause");
+return 0;
+}
