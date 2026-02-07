@@ -11,6 +11,17 @@
 // VIẾT CODE Ở ĐÂY
 #include<stdio.h>
 #include<stdlib.h>
+void timMin (int arr[],int n,int *soMin){
+    *soMin=arr[0];
+for (int i = 0; i < n; i++)
+{
+   if (*soMin>arr[i])
+   {
+    *soMin=arr[i];
+   }
+}
+
+}
 int main()
 {
     //tìm số lượng
@@ -35,15 +46,9 @@ int main()
         
     }
     //tim min
-    int min =phanTu[0];
-    for (int i = 0; i < n; i++)
-    {
-        if (phanTu[i]<min)
-        {
-            min=phanTu[i];
-        }
-        
-    }
+    int min ;
+    timMin(phanTu,n,&min);
+   
     printf("vậy phần tử lớn nhất là : %d",max);
     printf("vậy phần tử nhỏ nhất là : %d",min);
     system("pause");
