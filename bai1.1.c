@@ -14,25 +14,26 @@ void randomArray(int arr[], int size, int min, int max) {
 
 // HÀM IN MẢNG
 void printArray(int arr[], int size) {
-    printf("Các phần tử của mảng là:\n");
+    printf("cac phan tu cua mang la:\n");
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
+
 }
 
 
 int main() {
     int n;
     
-    printf("Nhập số lượng phần tử của mảng: ");
+    printf("nhap so luong phan tu cua mang: ");
     scanf("%d", &n);
     
-    int arr[10];
+    int arr[100];
 
     randomArray(arr, n, 1, 100);
     printArray(arr, n);
 
-    
+    system("pause");
     return 0;
 }
