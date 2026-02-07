@@ -12,6 +12,15 @@
 // VIẾT CODE Ở ĐÂY
 #include<stdio.h>
 #include<stdlib.h>
+#include <time.h>
+
+// HÀM PHÁT SINH NGẪU NHIÊN CÁC PHẦN TỬ CỦA MẢNG
+void randomArray(int arr[], int size, int min, int max) {
+    srand(time(NULL));
+    for (int i = 0; i < size; i++) {
+        arr[i] = rand() % (max - min + 1) + min;
+    }
+}
 int main(){
     //số lượng phần tử cần tính
     int n=0;
